@@ -56,8 +56,8 @@ sed -ie '\#<Directory /var/www/>#, \#</Directory># s/AllowOverride None/AllowOve
 sed -i "s/bind-address\s*=\s*127.0.0.1/bind-address = 0.0.0.0/" $mysql_config_file
 
 # Allow root access from any host
-echo "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'root' WITH GRANT OPTION" | mysql -u root --password=root
-echo "GRANT PROXY ON ''@'' TO 'root'@'%' WITH GRANT OPTION" | mysql -u root --password=root
+echo "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'root' WITH GRANT OPTION" | mysql -u root --password=$MYSQL_PASS
+echo "GRANT PROXY ON ''@'' TO 'root'@'%' WITH GRANT OPTION" | mysql -u root --password=$MYSQL_PASS
 
 # Install Composer
 curl -sS https://getcomposer.org/installer | php
