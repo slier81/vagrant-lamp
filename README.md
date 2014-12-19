@@ -64,6 +64,14 @@ The web root is located in the project directory at `www` and you can install yo
 And like any other vagrant file you have SSH access with
 
 	$ vagrant ssh  
+	
+###Potential Error
+If u got an error while running `composer install`, this is probably due to insufficient memory.Try improve your virtualbox memory.Add below code to `Vagrantfile`
+```
+config.vm.provider "virtualbox" do |vb|
+  vb.customize ["modifyvm", :id, "--memory", "1024"] #1gb
+end
+```
 
 ####Screenshot Of Localhost
 ![ScreenShot](http://i.imgur.com/EDHyAdM.png)
