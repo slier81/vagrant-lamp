@@ -42,6 +42,9 @@ PhpMyadmin is available at <http://localhost/phpmyadmin>
 Username: root  
 Password: root
 
+#### Mailcatcher
+Mailcatcher is available at <http://localhost:1080>  
+
 Technical Details
 -----------------
 * Ubuntu 14.04 64-bit
