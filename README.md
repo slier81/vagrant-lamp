@@ -46,9 +46,10 @@ Technical Details
 -----------------
 * Ubuntu 14.04 64-bit
 * Apache 2 (mod_rewrite preconfigured, work out of the box)
-* PHP 5.5 (xdebug preconfigured, work out of the box)
-* Composer
 * MySQL 5.5
+* PHP 5.5 (xdebug preconfigured, work out of the box)
+* PhpMyadmin
+* Composer
 * Mailcatcher (preconfigured, work out of the box)
 
 We are using the base Ubuntu 14.04 box from Vagrant. If you don't already have it downloaded
