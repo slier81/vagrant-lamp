@@ -33,23 +33,23 @@ That is pretty simple.
 The Apache server is available at <http://localhost>
 
 #### MySQL
-Externally the MySQL server is available at port 8889, and when running on the VM it is available as a socket or at port 3306 as usual.
-Username: root
+Externally the MySQL server is available at port 8889, and when running on the VM it is available as a socket or at port 3306 as usual.  
+Username: root  
 Password: root
 
 #### PhpMyadmin
-PhpMyadmin is available at <http://localhost/phpmyadmin>
-Username: root
+PhpMyadmin is available at <http://localhost/phpmyadmin>  
+Username: root  
 Password: root
 
 Technical Details
 -----------------
 * Ubuntu 14.04 64-bit
 * Apache 2
-* PHP 5.5 (xdebug preconfigured, worked out of the box)
+* PHP 5.5 (xdebug preconfigured, work out of the box)
 * Composer
 * MySQL 5.5
-* Mailcatcher (preconfigured, worked out of the box)
+* Mailcatcher (preconfigured, work out of the box)
 
 We are using the base Ubuntu 14.04 box from Vagrant. If you don't already have it downloaded
 the Vagrantfile has been configured to do it for you. This only has to be done once
@@ -59,4 +59,7 @@ The web root is located in the project directory at `www` and you can install yo
 
 And like any other vagrant file you have SSH access with
 
-	$ vagrant ssh
+	$ vagrant ssh  
+
+####ScreenShot Of Localhost
+![ScreenShot](http://i.imgur.com/EDHyAdM.png)
