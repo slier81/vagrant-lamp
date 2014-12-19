@@ -61,5 +61,5 @@ And like any other vagrant file you have SSH access with
 
 	$ vagrant ssh  
 
-####ScreenShot Of Localhost
+####Screenshot Of Localhost
 ![ScreenShot](http://i.imgur.com/EDHyAdM.png)
