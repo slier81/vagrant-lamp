@@ -7,13 +7,12 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "ubuntu/trusty64"
 
-	# Forward ports to Apache and MySQL
-  config.vm.network "forwarded_port", guest: 80, host: 8888
-  config.vm.network "forwarded_port", guest: 3306, host: 8889
-
-	config.vm.synced_folder "htdocs", "/var/www/html"
-
-	config.vm.provision "shell", path: "provision.sh"
+  # Forward ports to Apache, MySQL, MailCatcher
+  config.vm.network "forwarded_port", guest: 80, host: 80
+  config.vm.network "forwarded_port", guest: 3306, host: 3306
+  config.vm.network "forwarded_port", guest: 1080, host: 1080
+  config.vm.synced_folder "www", "/var/www/html", create: true
+  config.vm.provision "shell", path: "provision.sh"
 
   # config.vm.provider "virtualbox" do |vb|
   #   # Don't boot with headless mode
