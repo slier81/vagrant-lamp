@@ -21,7 +21,7 @@ Usage
 -----
 
 ### Startup
-	$ git clone http://www.github.com/mattandersen/vagrant-lamp
+	$ git clone https://github.com/slier81/vagrant-lamp.git
 	$ cd vagrant-lamp
 	$ vagrant up
 
@@ -30,10 +30,15 @@ That is pretty simple.
 ### Connecting
 
 #### Apache
-The Apache server is available at <http://localhost:8888>
+The Apache server is available at <http://localhost>
 
 #### MySQL
 Externally the MySQL server is available at port 8889, and when running on the VM it is available as a socket or at port 3306 as usual.
+Username: root
+Password: root
+
+#### PhpMyadmin
+PhpMyadmin is available at <http://localhost/phpmyadmin>
 Username: root
 Password: root
 
@@ -41,14 +46,16 @@ Technical Details
 -----------------
 * Ubuntu 14.04 64-bit
 * Apache 2
-* PHP 5.5
+* PHP 5.5 (xdebug preconfigured, worked out of the box)
+* Composer
 * MySQL 5.5
+* Mailcatcher (preconfigured, worked out of the box)
 
 We are using the base Ubuntu 14.04 box from Vagrant. If you don't already have it downloaded
 the Vagrantfile has been configured to do it for you. This only has to be done once
 for each account on your host computer.
 
-The web root is located in the project directory at `htdocs` and you can install your files there
+The web root is located in the project directory at `www` and you can install your files there
 
 And like any other vagrant file you have SSH access with
 
