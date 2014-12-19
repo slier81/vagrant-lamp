@@ -45,7 +45,7 @@ Password: root
 Technical Details
 -----------------
 * Ubuntu 14.04 64-bit
-* Apache 2
+* Apache 2 (mod_rewrite preconfigured, work out of the box)
 * PHP 5.5 (xdebug preconfigured, work out of the box)
 * Composer
 * MySQL 5.5
