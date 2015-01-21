@@ -35,7 +35,7 @@ echo "xdebug.remote_connect_back=On" >> $xdebug_config_file
 echo "xdebug.profiler_enable_trigger=1" >> $xdebug_config_file
 echo "xdebug.profiler_output_dir=\"/tmp\"" >> $xdebug_config_file
 echo "xdebug.profiler_append=On" >> $xdebug_config_file
-echo "xdebug.profiler_output_name=\"cachegrind\" >> $xdebug_config_file
+echo "xdebug.profiler_output_name=\"cachegrind\"" >> $xdebug_config_file
 
 # Configure MySql
 echo "mysql-server mysql-server/root_password password $MYSQL_PASS" | debconf-set-selections
