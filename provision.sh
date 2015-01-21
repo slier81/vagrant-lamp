@@ -28,8 +28,14 @@ apt-get -y install php5 php5-curl php5-mysql php5-sqlite php5-xdebug
 # Configure Php
 sed -i "s/display_startup_errors = Off/display_startup_errors = On/g" $php_config_file
 sed -i "s/display_errors = Off/display_errors = On/g" $php_config_file
+
+# Configure Xdebug
 echo "xdebug.remote_enable=On" >> $xdebug_config_file
 echo "xdebug.remote_connect_back=On" >> $xdebug_config_file
+echo "xdebug.profiler_enable_trigger=1" >> $xdebug_config_file
+echo "xdebug.profiler_output_dir=\"/tmp\"" >> $xdebug_config_file
+echo "xdebug.profiler_append=On" >> $xdebug_config_file
+echo "xdebug.profiler_output_name=\"cachegrind\" >> $xdebug_config_file
 
 # Configure MySql
 echo "mysql-server mysql-server/root_password password $MYSQL_PASS" | debconf-set-selections
