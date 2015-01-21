@@ -30,12 +30,11 @@ sed -i "s/display_startup_errors = Off/display_startup_errors = On/g" $php_confi
 sed -i "s/display_errors = Off/display_errors = On/g" $php_config_file
 
 # Configure Xdebug
-echo "xdebug.remote_enable=On" >> $xdebug_config_file
-echo "xdebug.remote_connect_back=On" >> $xdebug_config_file
+echo "xdebug.remote_enable=1" >> $xdebug_config_file
+echo "xdebug.remote_connect_back=1" >> $xdebug_config_file
 echo "xdebug.profiler_enable_trigger=1" >> $xdebug_config_file
-echo "xdebug.profiler_output_dir=\"/tmp\"" >> $xdebug_config_file
-echo "xdebug.profiler_append=On" >> $xdebug_config_file
-echo "xdebug.profiler_output_name=\"cachegrind\"" >> $xdebug_config_file
+echo "xdebug.profiler_output_dir=\"/vagrant/cachegrind\"" >> $xdebug_config_file
+echo "xdebug.profiler_output_name=\"cachegrind.out.%H.%t\"" >> $xdebug_config_file
 
 # Configure MySql
 echo "mysql-server mysql-server/root_password password $MYSQL_PASS" | debconf-set-selections
